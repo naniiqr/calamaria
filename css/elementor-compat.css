@@ -1,0 +1,78 @@
+/* Test harness only (NOT exported to Elementor): reproduces Elementor core + Hello theme + a default kit
+   so the static HTML is rendered under the same hostile defaults real Elementor ships with. */
+body{margin:0}
+h1,h2,h3,h4,h5,h6{margin-block-start:.5rem;margin-block-end:1rem;font-family:inherit;font-weight:500;line-height:1.2;color:inherit}
+p{margin-block-start:0;margin-block-end:.9rem}
+a{background-color:transparent;text-decoration:none;color:#c36}
+a:active,a:hover{color:#336}
+img{border-style:none;height:auto;max-width:100%}
+label{display:inline-block;line-height:1;vertical-align:middle}
+button,input,select,textarea{font-family:inherit;font-size:1rem;line-height:1.5;margin:0}
+input[type=text],input[type=email],input[type=tel],input[type=date],select,textarea{display:block;width:100%;padding:.5rem 1rem;border:1px solid #666;border-radius:3px;background-color:transparent;font-weight:400}
+button,[type=submit]{display:inline-block;font-weight:400;color:#c36;text-align:center;white-space:nowrap;user-select:none;background-color:transparent;border:1px solid #c36;padding:.5rem 1rem;font-size:1rem;border-radius:3px;transition:all .3s}
+ul{margin-block:0}
+
+.elementor-kit-5{--e-global-color-primary:#6EC1E4;--e-global-color-text:#7A7A7A}
+.elementor-kit-5 h1,.elementor-kit-5 h2,.elementor-kit-5 h3,.elementor-kit-5 h4{color:var(--e-global-color-primary);font-family:"Roboto",sans-serif;font-weight:600}
+.elementor-kit-5 a{color:#CC3366}
+.elementor-kit-5 button,.elementor-kit-5 .elementor-button{background-color:#61CE70;font-family:"Roboto",sans-serif;font-size:15px;font-weight:500;color:#fff;border-radius:3px;padding:12px 24px}
+
+.e-con{--display:flex;--flex-direction:column;--padding-top:10px;--padding-right:10px;--padding-bottom:10px;--padding-left:10px;--gap:20px 20px;--width:100%;--align-items:stretch;--justify-content:flex-start;
+  display:var(--display);flex-direction:var(--flex-direction);align-items:var(--align-items);justify-content:var(--justify-content);gap:var(--gap);
+  padding:var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);width:var(--width);min-width:0;position:relative;box-sizing:border-box}
+.e-con>.elementor-widget{max-width:100%}
+.elementor-widget{position:relative;--kit-widget-spacing:20px}
+.elementor-widget:not(:last-child){margin-block-end:var(--kit-widget-spacing)}
+.elementor-widget-container{transition:background .3s}
+.elementor-widget-heading .elementor-heading-title{padding:0;margin:0;line-height:1}
+.elementor-widget-text-editor{font-size:inherit;color:var(--e-global-color-text)}
+.elementor-widget-image img{vertical-align:middle;display:inline-block;max-width:100%;height:auto;border:none;border-radius:0;box-shadow:none}
+.elementor-widget-image{text-align:center}
+.elementor-button-wrapper{text-align:left}
+.elementor-button{display:inline-block;line-height:1;text-align:center;text-decoration:none;transition:all .3s;fill:#fff}
+.elementor-button-content-wrapper{display:flex;justify-content:center;gap:5px}
+
+/* ---- emulation of Elementor widget base CSS for the widgets used (approximation of the real stylesheet) ---- */
+.elementor-icon{display:inline-block;line-height:1;transition:all .3s;color:#69727d;font-size:50px;text-align:center}
+.elementor-icon i{width:1em;height:1em;position:relative;display:block}
+.elementor-icon i:before{position:absolute;left:50%;transform:translateX(-50%)}
+.elementor-view-stacked .elementor-icon{background-color:#69727d;color:#fff;padding:.5em}
+.elementor-shape-circle .elementor-icon{border-radius:50%}
+.elementor-widget-icon{text-align:center}
+.elementor-icon-box-wrapper{display:flex;flex-direction:row;text-align:left;gap:15px}
+.elementor-icon-box-icon{display:inline-block;flex:0 0 auto}
+.elementor-icon-box-title{margin:0;font-size:1.25em;font-weight:600}
+.elementor-icon-box-description{margin:0;color:#7a7a7a}
+.elementor-icon-list-items{list-style:none;margin:0;padding:0}
+.elementor-icon-list-item{margin:0;padding:0;position:relative;display:flex;align-items:center;font-size:inherit}
+.elementor-icon-list-item>a,.elementor-icon-list-item{gap:5px}
+.elementor-icon-list-icon{display:inline-flex;color:#69727d;font-size:14px;width:20px}
+.elementor-icon-list-text{color:#54595f;padding-left:5px}
+.elementor-inline-items{display:flex;flex-wrap:wrap}
+.elementor-inline-items .elementor-icon-list-item{margin-right:8px;margin-left:8px}
+.elementor-social-icons-wrapper{display:flex;flex-wrap:wrap;gap:5px}
+.elementor-social-icon{background-color:#69727d;font-size:25px;line-height:1;text-align:center;display:inline-flex;justify-content:center;align-items:center;padding:.5em;color:#fff;height:auto}
+.elementor-social-icon i{color:#fff}
+.elementor-shape-circle .elementor-social-icon{border-radius:50%}
+.elementor-screen-only{position:absolute;top:-10000em;width:1px;height:1px;overflow:hidden}
+.elementor-form-fields-wrapper{display:flex;flex-wrap:wrap}
+.elementor-form .elementor-field-group{flex-wrap:wrap;align-items:center;padding-right:5px;padding-left:5px;margin-bottom:10px;width:100%}
+.elementor-form .elementor-col-100{width:100%}.elementor-form .elementor-col-50{width:50%}.elementor-form .elementor-col-25{width:25%}.elementor-form .elementor-col-33{width:33.333%}
+.elementor-field-label{display:block;font-size:14px;padding-bottom:5px}
+.elementor-form .elementor-field-textual{display:block;width:100%;min-height:40px;padding:5px 14px;background:transparent;border:1px solid #69727d;color:#69727d;border-radius:3px;font-size:15px}
+.elementor-form textarea.elementor-field-textual{min-height:calc(40px*3)}
+.elementor-select-wrapper{display:flex;position:relative;width:100%}
+.elementor-select-wrapper select{appearance:none;flex-basis:100%;padding-right:20px;border:inherit;background:transparent;color:inherit}
+.elementor-select-wrapper .select-caret-down-wrapper{position:absolute;top:50%;transform:translateY(-50%);right:10px;pointer-events:none;font-size:11px}
+.elementor-form .elementor-button{padding-block:0;border:none;min-height:40px}
+.elementor-nav-menu--main .elementor-nav-menu{display:flex;list-style:none;margin:0;padding:0}
+.elementor-nav-menu a,.elementor-nav-menu a:hover{color:#3f444b}
+.elementor-nav-menu .elementor-item{display:block;padding:13px 20px;line-height:20px;font-size:15px}
+.elementor-menu-toggle{display:none;font-size:22px;padding:.25em;cursor:pointer;background:#818a91;color:#fff;border-radius:3px;align-items:center;justify-content:center}
+.elementor-nav-menu--dropdown{display:none;background:#fff;width:100%}
+.elementor-nav-menu--dropdown .elementor-nav-menu{display:block}
+.elementor-custom-embed{position:relative}
+.elementor-custom-embed iframe{display:block;width:100%;border:0}
+.elementor-sticky--active{z-index:99}
+.elementor-widget-button .elementor-button{background-color:#69727d}
+.eicon-caret-down:before{content:"\25BE";font-style:normal}
