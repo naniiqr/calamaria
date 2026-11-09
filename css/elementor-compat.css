@@ -76,3 +76,6 @@ ul{margin-block:0}
 .elementor-sticky--active{z-index:99}
 .elementor-widget-button .elementor-button{background-color:#69727d}
 .eicon-caret-down:before{content:"\25BE";font-style:normal}
+
+/* emulació de la "Superposició de fons" nativa d'Elementor (només per a la vista prèvia) */
+.has-ov::before{content:"";position:absolute;inset:0;background:var(--ov);pointer-events:none;z-index:0}
