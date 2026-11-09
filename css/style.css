@@ -487,3 +487,14 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);f
 @media (max-width:700px){.gal .elementor-image-gallery .gallery{grid-template-columns:repeat(2,1fr)}}
 .row__t,.sec--paper{background-color:#F5F2EA}
 .row__t{padding-right:clamp(28px,11vw,190px)}
+
+/* v10 · pestanyes d'Experiències (widget Pestanyes niades) */
+.tabs.elementor-widget{width:100%}
+.tabs .e-n-tabs-heading{gap:.5rem;justify-content:center;margin-bottom:clamp(24px,3vw,44px)}
+.tabs .e-n-tab-title{background:transparent;border:1px solid transparent;border-radius:0;color:var(--brown);font-family:var(--sans);font-size:.95rem;font-weight:400;line-height:1.5;padding:.5rem 1.1rem}
+.tabs .e-n-tab-title:hover{border-color:var(--line);background:transparent;color:var(--brown)}
+.tabs .e-n-tab-title[aria-selected="true"]{background:var(--brown);border-color:var(--brown);color:#fff}
+.tabs .e-n-tab-title-text{color:inherit;font:inherit}
+.tabs .e-n-tabs-content>.e-con{padding:0;width:100%}
+.tabc{width:100%}
+.sec__btn{display:flex;flex-direction:row;justify-content:center;margin-top:clamp(20px,2.4vw,32px)}

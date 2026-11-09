@@ -79,3 +79,10 @@ ul{margin-block:0}
 
 /* emulació de la "Superposició de fons" nativa d'Elementor (només per a la vista prèvia) */
 .has-ov::before{content:"";position:absolute;inset:0;background:var(--ov);pointer-events:none;z-index:0}
+
+/* emulació del widget Pestanyes niades (nested-tabs) */
+.e-n-tabs{display:flex;flex-direction:column;width:100%}
+.e-n-tabs-heading{display:flex;flex-wrap:wrap;justify-content:center;gap:0}
+.e-n-tab-title{display:flex;align-items:center;cursor:pointer;background:transparent;border:1px solid #ccc;padding:.6rem 1rem;order:var(--n-tabs-title-order)}
+.e-n-tabs-content>.e-con{display:none}
+.e-n-tabs-content>.e-con.e-active{display:flex}
