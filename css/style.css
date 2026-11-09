@@ -450,3 +450,5 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);f
 .room-acc .elementor-tab-content a:hover{background:#7A6A31}
 .ig.elementor-widget{display:block!important;grid-template-columns:none;width:100%}
 .ig .elementor-image-gallery{width:100%}
+
+.backlink{padding:96px clamp(12px,1.6vw,28px) 0;max-width:1680px;margin-inline:auto;width:100%}
