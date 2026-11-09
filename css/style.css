@@ -498,3 +498,8 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);f
 .tabs .e-n-tabs-content>.e-con{padding:0;width:100%}
 .tabc{width:100%}
 .sec__btn{display:flex;flex-direction:row;justify-content:center;margin-top:clamp(20px,2.4vw,32px)}
+
+/* Nosaltres: foto més petita, alineada en alçada amb el text */
+.pol-wrap{display:flex;flex-direction:row;justify-content:center;align-items:center}
+.pol-wrap .polaroid.elementor-widget{width:min(100%,340px);flex:none}
+.pol-wrap .polaroid img{aspect-ratio:4/5}
