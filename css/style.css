@@ -503,3 +503,8 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);f
 .pol-wrap{display:flex;flex-direction:row;justify-content:center;align-items:center}
 .pol-wrap .polaroid.elementor-widget{width:min(100%,340px);flex:none}
 .pol-wrap .polaroid img{aspect-ratio:4/5}
+
+/* secciones de texto + imagen: mismos márgenes a izquierda y derecha */
+.wrap:has(>.split){padding-inline:clamp(24px,7vw,120px)}
+.pol-wrap{justify-content:flex-end}
+.pol-wrap .polaroid.elementor-widget{margin-right:clamp(0px,2vw,32px)}
