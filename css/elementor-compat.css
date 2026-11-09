@@ -86,3 +86,13 @@ ul{margin-block:0}
 .e-n-tab-title{display:flex;align-items:center;cursor:pointer;background:transparent;border:1px solid #ccc;padding:.6rem 1rem;order:var(--n-tabs-title-order)}
 .e-n-tabs-content>.e-con{display:none}
 .e-n-tabs-content>.e-con.e-active{display:flex}
+
+/* emulació de Fons > Presentació amb efecte Ken Burns (només vista prèvia) */
+.elementor-background-slideshow{position:absolute;inset:0;overflow:hidden;z-index:0}
+.elementor-background-slideshow .swiper-wrapper{position:absolute;inset:0}
+.elementor-background-slideshow__slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease}
+.elementor-background-slideshow__slide.is-on{opacity:1}
+.elementor-background-slideshow__slide__image{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1)}
+.elementor-background-slideshow__slide.is-on .elementor-background-slideshow__slide__image{transform:scale(1.12);transition:transform 6.5s linear}
+.has-ov::before{z-index:1}
+@media (prefers-reduced-motion:reduce){.elementor-background-slideshow__slide.is-on .elementor-background-slideshow__slide__image{transform:none;transition:none}}
